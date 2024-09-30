@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div>
+        <label for="goal"> Goal </label>
+        <input type="text" id="goal" v-model="enteredValue"/>
+        <button @click="addGoal">Add Goal</button>
+    </div>
+    <ul>
+        <li v-for="goal in goals">[[ goal ]]</li>
+    </ul>
+</div>
+
+
+<script src="{% static 'assetsIndex.js' %}"></script>
+
+</body>
+</html>
